@@ -18,7 +18,7 @@ setup(
     description="""A patch for boto3 to use the AWS CLI credential cache. This uses 
     the same cache as the AWS CLI.""",
     long_description=Path("README.md").read_text(),
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     packages=["boto3_mfa_cache"],
     cmdclass={"build_py": build_py_with_pth},
     requires=["boto3", "botocore"],
