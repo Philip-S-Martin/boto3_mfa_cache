@@ -20,5 +20,6 @@ setup(
     packages=["boto3_mfa_cache"],
     cmdclass={"build_py": build_py_with_pth},
     requires=["boto3", "botocore"],
+    include_package_data=True,
 )
 
