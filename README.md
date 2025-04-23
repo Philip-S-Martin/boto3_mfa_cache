@@ -1,9 +1,9 @@
 ## Boto3 MFA Cache
 
 This package patches boto3 to use the AWS CLI credential cache. This uses the same cache as the AWS CLI, 
-which is stored in ~/.aws/cli/cache. This allows you to use MFA with boto3 without having to 
+which is stored in `~/.aws/cli/cache`. This allows you to use MFA with boto3 without having to 
 enter your credentials every time. The environment variable AWS_CREDENTIAL_CACHE can be set to a 
-different path if ~/.aws/cli/cache is not what you want to use.
+different path if `~/.aws/cli/cache` is not what you want to use.
 
 This pull is the primary reference for this package: https://github.com/boto/botocore/pull/1338
 
