@@ -1,6 +1,7 @@
 import os
 from setuptools import setup
 from setuptools.command.build_py import build_py as _build_py
+from pathlib import Path
 
 class build_py_with_pth(_build_py):
     """Include our .pth file in the wheel/sdist’s build_lib."""
@@ -16,7 +17,8 @@ setup(
     author="Philip Martin",
     description="""A patch for boto3 to use the AWS CLI credential cache. This uses 
     the same cache as the AWS CLI.""",
-    long_description=open("README.md").read(),
+    long_description=Path("README.md").read_text(),
+    long_description_content_type='text/markdown'
     packages=["boto3_mfa_cache"],
     cmdclass={"build_py": build_py_with_pth},
     requires=["boto3", "botocore"],
